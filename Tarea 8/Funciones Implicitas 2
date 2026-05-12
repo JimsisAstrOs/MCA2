@@ -1,0 +1,12 @@
+from sympy import symbols, Eq
+from sympy.plotting import plot_implicit
+
+P, V = symbols('P V')
+
+ecuacion = Eq((P + 5/V**2)*(V - 0.03), 9.7)
+
+plot_implicit(
+    ecuacion,
+    (V,0.05,5),
+    (P,-10,20)
+)
