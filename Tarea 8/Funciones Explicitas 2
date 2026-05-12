@@ -1,0 +1,16 @@
+from sympy import *
+from sympy.plotting import plot
+
+x, k = symbols('x k')
+
+f = summation(
+    sin(2*pi*k**2*x)/(4*pi**2*k**5 + x**2*2**k),
+    (k,1,100)
+)
+
+df = diff(f, x)
+ddf = diff(df, x)
+
+plot(f, (x,-2,2), title='f(x)')
+plot(df, (x,-2,2), title="f'(x)")
+plot(ddf, (x,-2,2), title="f''(x)")
