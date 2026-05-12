@@ -1,0 +1,12 @@
+from sympy import symbols, cos, sin, pi
+from sympy.plotting import plot_parametric
+
+t = symbols('t')
+
+x = cos(t) + (1/2)*cos(7*t) + (1/3)*sin(17*t)
+y = sin(t) + (1/2)*sin(7*t) + (1/3)*cos(17*t)
+
+plot_parametric(
+    x, y,
+    (t,0,14*pi)
+)
