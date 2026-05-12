@@ -1,0 +1,10 @@
+from sympy import symbols, Eq
+from sympy.plotting import plot_implicit
+
+x, y = symbols('x y')
+
+plot_implicit(
+    Eq(x**2 + y**3 - 2*y, 3),
+    (x,-5,5),
+    (y,-5,5)
+)
