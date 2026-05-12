@@ -1,0 +1,19 @@
+from sympy import symbols, sqrt, ln
+from sympy.plotting import plot
+
+x = symbols('x')
+
+f = sqrt(-x)
+g = ln(x)
+
+# f(g(x))
+plot(f.subs(x, g), (x, 0.01, 1),
+     title='f(g(x))')
+
+# g(f(x))
+plot(g.subs(x, f), (x, -10, -0.01),
+     title='g(f(x))')
+
+# f(x)g(x)
+plot(f*g, (x, -10, -0.01),
+     title='f(x)g(x)')
