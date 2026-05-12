@@ -1,4 +1,4 @@
-from sympy import symbols, Eq
+|from sympy import symbols, Eq
 from sympy.plotting import plot_implicit
 
 x, y = symbols('x y')
